@@ -5,7 +5,8 @@ from sklearn import svm
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, f1_score
 from sklearn import tree
-import cPickle
+# import cPickle
+import pickle
 
 
 def propensity_score_training(data, label, mode):
@@ -96,7 +97,8 @@ def onehot_trans(t, catog):
     return trans
 
 def load_propensity_score(model_file_name,x):
-    loaded_model = cPickle.load(open(model_file_name, 'rb'))
+    # loaded_model = cPickle.load(open(model_file_name, 'rb'))
+    loaded_model = pickle.load(open(model_file_name, 'rb'))
     result = loaded_model.predict_proba(x)
     propensity_score = result[:,1]
     propensity_score = propensity_score.flatten()
