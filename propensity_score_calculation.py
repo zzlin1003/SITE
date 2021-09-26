@@ -10,7 +10,8 @@ def main(dataform, propensity_dir):
 
     propensity_score, clf = propensity_score_training(data['x'], data['t'], 'Logistic-regression')
     filename = propensity_dir
-    cPickle.dump(clf, open(filename, 'wb'))
+    # cPickle.dump(clf, open(filename, 'wb'))
+    pickle.dump(clf, open(filename, 'wb'))
 
 
 if __name__ == "__main__":
