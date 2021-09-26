@@ -64,14 +64,14 @@ def propensity_score_training(data, label, mode):
         prob_train = clf.predict_proba(train_x)
 
         acc_eva = accuracy_score(eva_t, pred_eva)
-        print acc_train
-        print acc_eva
-        print f1_train
-        print f1_eva
+        print (acc_train)
+        print (acc_eva)
+        print (f1_train)
+        print (f1_eva)
         prob_all = clf.predict_proba(data)
         result_all = clf.predict(data)
-        print result_all[1:10]
-        print prob_all[1:10,:]
+        print (result_all[1:10])
+        print (prob_all[1:10,:])
         return prob_all, clf
     if mode == 'CART':
         clf = tree.DecisionTreeClassifier(max_depth=6 ,class_weight = 'balanced')
@@ -81,9 +81,9 @@ def propensity_score_training(data, label, mode):
 
         f1_eva = f1_score(eva_t, pred_eva)
         acc_eva = accuracy_score(eva_t, pred_eva)
-        print pred_eva_prob
-        print acc_eva
-        print f1_eva
+        print (pred_eva_prob)
+        print (acc_eva)
+        print (f1_eva)
 
 def onehot_trans(t, catog):
     # control treat: [0,1] ======> treated
