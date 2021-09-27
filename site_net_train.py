@@ -32,7 +32,8 @@ tf.app.flags.DEFINE_integer('iterations', 2000, """Number of iterations. """)
 tf.app.flags.DEFINE_float('weight_init', 0.01, """Weight initialization scale. """)
 tf.app.flags.DEFINE_float('lrate_decay', 0.95, """Decay of learning rate every 100 iterations """)
 tf.app.flags.DEFINE_integer('varsel', 0, """Whether the first layer performs variable selection. """)
-tf.app.flags.DEFINE_string('outdir', '../results/ihdp/', """Output directory. """)
+# tf.app.flags.DEFINE_string('outdir', '../results/ihdp/', """Output directory. """)
+tf.app.flags.DEFINE_string('outdir', './results/ihdp/', """Output directory. """)
 # tf.app.flags.DEFINE_string('datadir', '../data/', """Data directory. """)
 tf.app.flags.DEFINE_string('datadir', './data/', """Data directory. """)
 tf.app.flags.DEFINE_string('dataform', 'ihdp_npci_1-100.train.npz', """Training data filename form. """)
@@ -494,7 +495,7 @@ def run(outdir):
 def main(argv=None):  # pylint: disable=unused-argument
     """ Main entry point """
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S-%f")
-    outdir = FLAGS.outdir+'/results_'+timestamp+'/'
+    outdir = FLAGS.outdir+'results_'+timestamp+'/'
     os.mkdir(outdir)
 
 
