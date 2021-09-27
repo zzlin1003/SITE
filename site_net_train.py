@@ -10,27 +10,40 @@ from subprocess import call
 import simi_ite.site_net as site
 from simi_ite.util import *
 
+tf.disable_eager_execution()
+
 ''' Define parameter flags '''
 FLAGS = tf.app.flags.FLAGS
 tf.app.flags.DEFINE_string('loss', 'l2', """Which loss function to use (l1/l2/log)""")
-tf.app.flags.DEFINE_integer('n_in', 2, """Number of representation layers. """)
-tf.app.flags.DEFINE_integer('n_out', 2, """Number of regression layers. """)
-tf.app.flags.DEFINE_float('p_lambda', 0.0, """Weight decay regularization parameter. """)
-tf.app.flags.DEFINE_integer('rep_weight_decay', 1, """Whether to penalize representation layers with weight decay""")
-tf.app.flags.DEFINE_float('dropout_in', 0.9, """Input layers dropout keep rate. """)
-tf.app.flags.DEFINE_float('dropout_out', 0.9, """Output layers dropout keep rate. """)
+# change n_in and n_out to 3
+tf.app.flags.DEFINE_integer('n_in', 3, """Number of representation layers. """)
+tf.app.flags.DEFINE_integer('n_out', 3, """Number of regression layers. """)
+# change p_lambda to 1e-4
+tf.app.flags.DEFINE_float('p_lambda', 1e-4, """Weight decay regularization parameter. """)
+# change rep_weight_decay to 0
+tf.app.flags.DEFINE_integer('rep_weight_decay', 0, """Whether to penalize representation layers with weight decay""")
+# change drop_in and drop_out from 0.9 to 1.0
+tf.app.flags.DEFINE_float('dropout_in', 1.0, """Input layers dropout keep rate. """)
+tf.app.flags.DEFINE_float('dropout_out', 1.0, """Output layers dropout keep rate. """)
 tf.app.flags.DEFINE_string('nonlin', 'relu', """Kind of non-linearity. Default relu. """)
-tf.app.flags.DEFINE_float('lrate', 0.05, """Learning rate. """)
-tf.app.flags.DEFINE_float('decay', 0.5, """RMSProp decay. """)
+# change lrate to 1e-3
+tf.app.flags.DEFINE_float('lrate', 1e-3, """Learning rate. """)
+# change decay from 0.5 to 0.3
+tf.app.flags.DEFINE_float('decay', 0.3, """RMSProp decay. """)
 tf.app.flags.DEFINE_integer('batch_size', 100, """Batch size. """)
-tf.app.flags.DEFINE_integer('dim_in', 100, """Pre-representation layer dimensions. """)
+# change dim_in to 200
+tf.app.flags.DEFINE_integer('dim_in', 200, """Pre-representation layer dimensions. """)
 tf.app.flags.DEFINE_integer('dim_out', 100, """Post-representation layer dimensions. """)
 tf.app.flags.DEFINE_integer('batch_norm', 0, """Whether to use batch normalization. """)
-tf.app.flags.DEFINE_string('normalization', 'none', """How to normalize representation (after batch norm). none/bn_fixed/divide/project """)
-tf.app.flags.DEFINE_integer('experiments', 1, """Number of experiments. """)
+# change normalization to divide
+tf.app.flags.DEFINE_string('normalization', 'divide', """How to normalize representation (after batch norm). none/bn_fixed/divide/project """)
+# change eexperiments to 10
+tf.app.flags.DEFINE_integer('experiments', 10, """Number of experiments. """)
 tf.app.flags.DEFINE_integer('iterations', 2000, """Number of iterations. """)
-tf.app.flags.DEFINE_float('weight_init', 0.01, """Weight initialization scale. """)
-tf.app.flags.DEFINE_float('lrate_decay', 0.95, """Decay of learning rate every 100 iterations """)
+# change weight_init from 0.01 to 0.1
+tf.app.flags.DEFINE_float('weight_init', 0.1, """Weight initialization scale. """)
+# change lrate_decay from 0.95 to 0.97
+tf.app.flags.DEFINE_float('lrate_decay', 0.97, """Decay of learning rate every 100 iterations """)
 tf.app.flags.DEFINE_integer('varsel', 0, """Whether the first layer performs variable selection. """)
 # tf.app.flags.DEFINE_string('outdir', '../results/ihdp/', """Output directory. """)
 tf.app.flags.DEFINE_string('outdir', './results/ihdp/', """Output directory. """)
@@ -42,21 +55,30 @@ tf.app.flags.DEFINE_string('data_test', 'ihdp_npci_1-100.test.npz', """Test data
 tf.app.flags.DEFINE_integer('sparse', 0, """Whether data is stored in sparse format (.x, .y). """)
 tf.app.flags.DEFINE_integer('seed', 1, """Seed. """)
 tf.app.flags.DEFINE_integer('repetitions', 1, """Repetitions with different seed.""")
-tf.app.flags.DEFINE_integer('use_p_correction', 1, """Whether to use population size p(t) in mmd/disc/wass.""")
-tf.app.flags.DEFINE_string('optimizer', 'RMSProp', """Which optimizer to use. (RMSProp/Adagrad/GradientDescent/Adam)""")
+# change use_p_correction from 1 to 0
+tf.app.flags.DEFINE_integer('use_p_correction', 0, """Whether to use population size p(t) in mmd/disc/wass.""")
+# change optimizer from RMSProp to Adam
+tf.app.flags.DEFINE_string('optimizer', 'Adam', """Which optimizer to use. (RMSProp/Adagrad/GradientDescent/Adam)""")
 tf.app.flags.DEFINE_string('imb_fun', 'mmd_lin', """Which imbalance penalty to use (mmd_lin/mmd_rbf/mmd2_lin/mmd2_rbf/lindisc/wass). """)
 tf.app.flags.DEFINE_integer('output_csv',0,"""Whether to save a CSV file with the results_try1""")
 tf.app.flags.DEFINE_integer('output_delay', 100, """Number of iterations between log/loss outputs. """)
-tf.app.flags.DEFINE_integer('pred_output_delay', -1, """Number of iterations between prediction outputs. (-1 gives no intermediate output). """)
+# change pred_output_delay from -1 to 200
+tf.app.flags.DEFINE_integer('pred_output_delay', 200, """Number of iterations between prediction outputs. (-1 gives no intermediate output). """)
 tf.app.flags.DEFINE_integer('debug', 0, """Debug mode. """)
 tf.app.flags.DEFINE_integer('save_rep', 0, """Save representations after training. """)
-tf.app.flags.DEFINE_float('val_part', 0, """Validation part. """)
-tf.app.flags.DEFINE_boolean('split_output', 0, """Whether to split output layers= between treated and control. """)
+# change val_part from 0 to 0.3
+tf.app.flags.DEFINE_float('val_part', 0.3, """Validation part. """)
+# change split_output to 1
+tf.app.flags.DEFINE_boolean('split_output', 1, """Whether to split output layers= between treated and control. """)
 tf.app.flags.DEFINE_boolean('reweight_sample', 1, """Whether to reweight sample for prediction loss with average treatment probability. """)
-tf.app.flags.DEFINE_float('p_pddm', 1.0, """PDDM unit parameter """)
-tf.app.flags.DEFINE_float('p_mid_point_mini', 1.0, """Mid point distance minimization parameter """)
-tf.app.flags.DEFINE_float('dim_pddm', 100.0, """Dimension in PDDM fist layer """)
-tf.app.flags.DEFINE_float('dim_c', 100.0, """Dimension in PDDM unit for c """)
+# change p_pddm from 1.0 to [0.1,0.316,1,3.16,10,31.6,100,316,1000]
+tf.app.flags.DEFINE_float('p_pddm', [0.1,0.316,1,3.16,10,31.6,100,316,1000], """PDDM unit parameter """)
+# change p_mid_point_mini from 1.0 to [0.1,0.316,1,3.16,10,31.6,100,316,1000]
+tf.app.flags.DEFINE_float('p_mid_point_mini', [0.1,0.316,1,3.16,10,31.6,100,316,1000], """Mid point distance minimization parameter """)
+# change dim_pddm from 100.0 to 200
+tf.app.flags.DEFINE_float('dim_pddm', 200, """Dimension in PDDM fist layer """)
+# change dim_c from 100.0 to 200
+tf.app.flags.DEFINE_float('dim_c', 200, """Dimension in PDDM unit for c """)
 tf.app.flags.DEFINE_float('dim_s', 100.0, """Dimension in PDDM unit for s """)
 tf.app.flags.DEFINE_string('propensity_dir','./propensity_score/ihdp_propensity_model.sav', """Dir where the propensity model is saved""" )
 tf.app.flags.DEFINE_boolean('equal_sample', 0, """Whether to fectch equal number of samples with different labels. """)
