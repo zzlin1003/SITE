@@ -1,7 +1,7 @@
 import tensorflow as tf
 import numpy as np
 
-from util import *
+from simi_ite.util import *
 
 class site_net(object):
 
