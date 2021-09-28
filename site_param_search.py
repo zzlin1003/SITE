@@ -79,21 +79,21 @@ def run(cfg_file, num_runs):
     for i in range(num_runs):
         cfg = sample_config(configs)
         if is_used_cfg(cfg, used_cfg_file):
-            print 'Configuration used, skipping'
+            print ('Configuration used, skipping')
             continue
 
         save_used_cfg(cfg, used_cfg_file)
 
-        print '------------------------------'
-        print 'Run %d of %d:' % (i+1, num_runs)
-        print '------------------------------'
-        print '\n'.join(['%s: %s' % (str(k), str(v)) for k,v in cfg.iteritems() if len(configs[k])>1])
+        print ('------------------------------')
+        print ('Run %d of %d:' % (i+1, num_runs))
+        print ('------------------------------')
+        print ('\n'.join(['%s: %s' % (str(k), str(v)) for k,v in cfg.items() if len(configs[k])>1]))
 
-        flags = ' '.join('--%s %s' % (k,str(v)) for k,v in cfg.iteritems())
+        flags = ' '.join('--%s %s' % (k,str(v)) for k,v in cfg.items())
         call('python site_net_train.py %s' % flags, shell=True)
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print 'Usage: python site_param_search.py <config file> <num runs>'
+        print ('Usage: python site_param_search.py <config file> <num runs>')
     else:
         run(sys.argv[1], int(sys.argv[2]))
