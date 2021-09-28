@@ -37,8 +37,8 @@ tf.app.flags.DEFINE_integer('dim_out', 100, """Post-representation layer dimensi
 tf.app.flags.DEFINE_integer('batch_norm', 0, """Whether to use batch normalization. """)
 # change normalization to divide
 tf.app.flags.DEFINE_string('normalization', 'divide', """How to normalize representation (after batch norm). none/bn_fixed/divide/project """)
-# change eexperiments to 10
-tf.app.flags.DEFINE_integer('experiments', 10, """Number of experiments. """)
+# change eexperiments to 100
+tf.app.flags.DEFINE_integer('experiments', 100, """Number of experiments. """)
 tf.app.flags.DEFINE_integer('iterations', 2000, """Number of iterations. """)
 # change weight_init from 0.01 to 0.1
 tf.app.flags.DEFINE_float('weight_init', 0.1, """Weight initialization scale. """)
