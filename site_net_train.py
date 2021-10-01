@@ -74,7 +74,7 @@ tf.app.flags.DEFINE_boolean('reweight_sample', 1, """Whether to reweight sample 
 # option: [0.1,0.316,1,3.16,10,31.6,100,316,1000]
 tf.app.flags.DEFINE_float('p_pddm', 1.0, """PDDM unit parameter """)
 # option: [0.1,0.316,1,3.16,10,31.6,100,316,1000]
-tf.app.flags.DEFINE_float('p_mid_point_mini', 1.0, """Mid point distance minimization parameter """)
+tf.app.flags.DEFINE_float('p_mid_point_mini', 3.2e+02, """Mid point distance minimization parameter """)
 # change dim_pddm from 100.0 to 200
 tf.app.flags.DEFINE_float('dim_pddm', 200, """Dimension in PDDM fist layer """)
 # change dim_c from 100.0 to 200
