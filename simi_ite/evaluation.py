@@ -8,7 +8,8 @@ from sklearn.metrics import roc_auc_score
 # from logger import Logger as Log
 import logging as Log
 
-from loader import *
+# from loader import *
+from simi_ite.loader import *
 
 POL_CURVE_RES = 40
 
