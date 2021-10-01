@@ -5,7 +5,8 @@ import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
 
-from loader import *
+# from loader import *
+from simi_ite.loader import *
 
 LINE_WIDTH = 2
 FONTSIZE_LGND = 8
