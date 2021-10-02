@@ -146,7 +146,7 @@ def select_parameters(results, configs, stop_set, stop_criterion, choice_set, ch
     print (np.mean(i_sel,1))
 
     ''' Select configuration '''
-    results_all = [dict([(k1, dict([(k2, v[i,]) for k2,v in results_sel[k1].iteritems()]))
+    results_all = [dict([(k1, dict([(k2, v[i,]) for k2,v in results_sel[k1].items()]))
                         for k1 in results_sel.keys()]) for i in range(len(configs))]
 
     labels = ['%d' % i for i in range(len(configs))]
@@ -388,7 +388,7 @@ def plot_cfr_evaluation_bin(results, configs, output_dir):
     print (A)
 
     ''' Print evaluation results_try1 '''
-    results_alphas = [dict([(k1, dict([(k2, v[i,]) for k2,v in results_sel[k1].iteritems()]))
+    results_alphas = [dict([(k1, dict([(k2, v[i,]) for k2,v in results_sel[k1].items()]))
                         for k1 in results_sel.keys()]) for i in range(len(alphas))]
     di = configs[0]['n_in']
     do = configs[0]['n_out']
