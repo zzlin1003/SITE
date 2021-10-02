@@ -5,8 +5,7 @@ from sklearn.metrics import roc_auc_score
 
 
 
-# from logger import Logger as Log
-import logging as Log
+from simi_ite.logger import Logger as Log
 
 # from loader import *
 from simi_ite.loader import *
@@ -386,20 +385,17 @@ def evaluate(output_dir, data_path_train, data_path_test=None, binary=False):
     configs = [r['config'] for r in results]
 
     multiple_exps = (configs[0]['experiments'] > 1)
-    # if Log.VERBOSE and multiple_exps:
-    if Log.INFO and multiple_exps:
+    if Log.VERBOSE and multiple_exps:
         print ('Multiple data (experiments) detected')
 
     # Load training data
-    # if Log.VERBOSE:
-    if Log.INFO:
+    if Log.VERBOSE:
         print ('Loading TRAINING data %s...' % data_path_train)
     data_train = load_data(data_path_train)
 
     # Load test data
     if data_path_test is not None:
-        # if Log.VERBOSE:
-        if Log.INFO:
+        if Log.VERBOSE:
             print ('Loading TEST data %s...' % data_path_test)
         data_test = load_data(data_path_test)
     else:
@@ -411,12 +407,10 @@ def evaluate(output_dir, data_path_train, data_path_test=None, binary=False):
     eval_results = []
     configs_out = []
     i = 0
-    # if Log.VERBOSE:
-    if Log.INFO:
+    if Log.VERBOSE:
         print ('Evaluating result (out of %d): ' % len(results))
     for result in results:
-        # if Log.VERBOSE:
-        if Log.INFO:
+        if Log.VERBOSE:
             print ('Evaluating %d...' % (i+1))
 
         try:

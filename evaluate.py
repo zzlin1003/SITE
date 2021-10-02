@@ -5,6 +5,7 @@ import os
 import pickle
 
 from simi_ite.logger import Logger as Log
+
 Log.VERBOSE = True
 
 import simi_ite.evaluation as evaluation

@@ -1,8 +1,7 @@
 import os
 import numpy as np
 
-# from logger import Logger as Log
-import logging as Log
+from simi_ite.logger import Logger as Log
 
 def load_result_file(file):
     arr = np.load(file)
@@ -31,8 +30,7 @@ def load_config(cfgfile):
     return cfg
 
 def load_single_result(result_dir):
-    # if Log.VERBOSE:
-    if Log.INFO:
+    if Log.VERBOSE:
         print ('Loading %s...' % result_dir)
 
     config_path = '%s/config.txt' % result_dir
@@ -69,8 +67,7 @@ def load_single_result(result_dir):
 
 def load_results(output_dir):
 
-    # if Log.VERBOSE:
-    if Log.INFO:
+    if Log.VERBOSE:
         print ('Loading results_try1 from %s...' % output_dir)
 
     ''' Detect results_try1 structure '''
@@ -84,8 +81,7 @@ def load_results(output_dir):
     exp_dirs = [f for f in files if os.path.isdir(f)
                     if os.path.isfile('%s/result.npz' % f)]
 
-    # if Log.VERBOSE:
-    if Log.INFO:
+    if Log.VERBOSE:
         print ('Found %d experiment configurations.' % len(exp_dirs))
 
     # Load each result folder
