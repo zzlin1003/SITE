@@ -1,0 +1,136 @@
+#################
+# evaluation.py #
+#################
+
+evaluate():
+
+	INPUT:
+		output_dir: results/ihdp
+
+		data_path_train: ../CEVAE/datasets/TWINS/twins_1-5_train.npz
+
+		data_path_test: ../CEVAE/datasets/TWINS/twins_1-5_test.npz
+
+		binary: if 'loss'=='log', then "True", else 'False'
+	(content)
+		results: output of "load_results"
+
+	OUTPUT:
+
+evaluate_result():
+	INPUT:
+		result: result['train'] -- {'pred': shape (726, 2, 5, 11),
+									 'val': shape (5, 217),
+									 'loss': shape (22, 5, 5)}
+
+		data: data_train -- {'x': arr['x'], 't': arr['t'], 'e': arr['e'](or None), 
+						'yf': arr['yf'], 'ycf': arr['ycf'](or None),
+						'mu0': arr['mu0'](or None), 'mu1': arr['mu1'](or None), 
+						'ate': np.mean(arr['ate'])(or None), 
+						'YMUL': arr['ymul'][0,0](or 1), 'YADD': arr['yadd'][0,0](or 0), 
+						'ATE': np.mean(arr['ate'])(or None),
+						'HAVE_TRUTH': False (True if there's 'ycf','mu0' and 'mu1'), 'SPARSE': False}
+						(output of 'load_data')
+
+		validation = False
+
+		mutiple_exps = True (False if 'experiments' in the config > 1)
+
+		binary = if 'loss'=='log', then "True", else 'False'
+
+	(content)
+
+	OUTPUT:
+	
+evaluate_bin_att():
+	INPUT:
+		predictions: shape (726, 2, 5, 11) [:,:,i_rep,i_out]
+
+		data:   data -- {'x': arr['x'], 't': arr['t'], 'e': arr['e'](or None), 
+						'yf': arr['yf'], 'ycf': arr['ycf'](or None),
+						'mu0': arr['mu0'](or None), 'mu1': arr['mu1'](or None), 
+						'ate': np.mean(arr['ate'])(or None), 
+						'YMUL': arr['ymul'][0,0](or 1), 'YADD': arr['yadd'][0,0](or 0), 
+						'ATE': np.mean(arr['ate'])(or None),
+						'HAVE_TRUTH': False (True if there's 'ycf','mu0' and 'mu1'), 'SPARSE': False}
+						(output of 'load_data')
+
+		i_exp: i_rep
+
+		I_subset: I_valid_rep -- None
+
+		compute_policy_curve: compute_policy_curve -- True
+
+		nn_t: nn_t -- np.nan
+
+		nn_c: nn_c -- np.nan
+
+	(content)
+		
+
+	OUTPUT:
+###################
+# simi_ite.loader #
+###################
+
+load_results():
+
+	INPUT:
+		output_dir: results/ihdp
+	(content)
+		f: file path under results/ihdp, for example, results/ihdp/ihdpresults_20211125_223531-933853
+
+	OUTPUT:
+		a list, each element is the output of "load_single_result"
+
+load_single_result():
+
+	INPUT:
+		result_dir: file path under results/ihdp, for example, results/ihdp/ihdpresults_20211125_223531-933853
+
+	(content)
+		n_rep = max(repetitions: 1, experiments: 5) = 5
+
+	OUTPUT:
+		{'train': output of "load_result_file" 
+		'test': output of "load_result_file" 
+		'config': output of load_config}
+
+load_config():
+
+	INPUT:
+		cfgfile: config file path in the "results" file, e.g. results/ihdp/ihdpresults_20211125_223531-933853/config.txt
+
+
+	OUTPUT: 
+		(dictionary) cfg, key: config parameters, val: parameter values
+
+
+load_result_file():
+
+	INPUT:
+		file: results/ihdp/ihdpresults_20211125_223531-933853/result.npz
+
+
+	OUTPUT:
+		(dictionary) D: {'pred': shape (726, 2, 5, 11),
+						 'val': shape (5, 217),
+						 'loss': shape (22, 5, 5)}
+
+load_data():
+	INPUT:
+		datapath: ../CEVAE/datasets/TWINS/twins_1-5_train.npz
+	(content)
+	arr = np.load(datapath)
+	OUTPUT: 
+		{'x': arr['x'], 't': arr['t'], 'e': arr['e'](or None), 'yf': arr['yf'], 'ycf': arr['ycf'](or None),
+		'mu0': arr['mu0'](or None), 'mu1': arr['mu1'](or None), 'ate': np.mean(arr['ate'])(or None), 
+		'YMUL': arr['ymul'][0,0](or 1), 'YADD': arr['yadd'][0,0](or 0), 'ATE': np.mean(arr['ate'])(or None),
+		'HAVE_TRUTH': False (True if there's 'ycf','mu0' and 'mu1'), 'SPARSE': False}
+
+
+
+
+
+
+
