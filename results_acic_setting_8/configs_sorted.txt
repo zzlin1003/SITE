@@ -1,0 +1,9 @@
+p_mid_point_mini=0.1, p_pddm=0.1
+p_mid_point_mini=1.0, p_pddm=0.1
+p_mid_point_mini=0.1, p_pddm=0.316
+p_mid_point_mini=316.0, p_pddm=0.1
+p_mid_point_mini=10.0, p_pddm=3.16
+p_mid_point_mini=100.0, p_pddm=10.0
+p_mid_point_mini=1000.0, p_pddm=3.16
+p_mid_point_mini=0.316, p_pddm=100.0
+p_mid_point_mini=1000.0, p_pddm=1000.0

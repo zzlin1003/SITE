@@ -1,3 +1,56 @@
+evaluate.py
+
+	INPUT: 
+		config_file
+
+		overwrite=False
+
+		filters=None
+
+
+	(content)
+
+	OUTPUT:
+
+########################
+# simi_ite.plotting.py #
+########################
+plot_evaluation_cont():
+	INPUT:
+		results: output of evaluation.evaluate()
+		configs: output of evaluation.evaluate()
+		output_dir:
+		data_train: directory
+		data_test: directory
+		filters:
+
+	(content)
+		results: same format as 'results' in INPUT
+		configs: same format as 'configs' in INPUT
+
+	OUTPUT:
+		
+		
+select_parameters():
+	INPUT:
+		results: results
+		configs: configs
+		stop_set: EARLY_STOP_SET_CONT -> 'valid'
+		stop_criterion: EARLY_STOP_CRITERION_CONT -> 'objective'
+        	choice_set: CONFIG_CHOICE_SET_CONT -> 'valid'
+		choice_criterion: CONFIG_CRITERION_CONT -> 'objective'
+
+
+	(content)
+		n_exp: 5
+		i_sel: value ranging from 0 to 11
+	OUTPUT:
+		
+
+
+		
+
+
 #################
 # evaluation.py #
 #################
@@ -14,14 +67,27 @@ evaluate():
 		binary: if 'loss'=='log', then "True", else 'False'
 	(content)
 		results: output of "load_results"
+		
+		eval_results: a list, the length is the number of files in 'output_dir'; each element is a dictionary 
+				{'train': output of evaluate_result(),'valid': evaluate_result(), 'test': evaluate_result()}
+
+		v: (num of folders in 'output_dir', 5, 11)
+
+		eval_dict: {'train': a dictionary, keys are the same as the output of evaluate_result(), value is the corresponding 'v'
+			    'test':
+			    'valid':}
 
 	OUTPUT:
+		eval_dict,
+
+		configs_out: a list with length 'num of folders' under 'output_dir'
+
 
 evaluate_result():
 	INPUT:
 		result: result['train'] -- {'pred': shape (726, 2, 5, 11),
-									 'val': shape (5, 217),
-									 'loss': shape (22, 5, 5)}
+					    'val': shape (5, 217),
+					    'loss': shape (22, 5, 5)}
 
 		data: data_train -- {'x': arr['x'], 't': arr['t'], 'e': arr['e'](or None), 
 						'yf': arr['yf'], 'ycf': arr['ycf'](or None),
@@ -39,9 +105,16 @@ evaluate_result():
 		binary = if 'loss'=='log', then "True", else 'False'
 
 	(content)
+		eval_results: shape (n_outputs, n_rep) -> (11, 5), each element is the output of evaluate_bin_att()/evaluate_cont_ate()
+		
+		(reformat 'eval_results')
+		eval_dict: the keys are the keys of the output of evaluate_bin_att()/evaluate_cont_ate(), the shape of each value is (n_rep, n_outputs) -> (5, 11)
+
+		
 
 	OUTPUT:
-	
+		eval_dict (may have the key 'objective')
+
 evaluate_bin_att():
 	INPUT:
 		predictions: shape (726, 2, 5, 11) [:,:,i_rep,i_out]
@@ -66,9 +139,59 @@ evaluate_bin_att():
 		nn_c: nn_c -- np.nan
 
 	(content)
+		if there's an 'e' column (propensity score):
+			eff_pred = (predictions[:, 1]>0.5) - (predictions[:, 0]>0.5)
+			eff_pred[t > 0] = -eff_pred[t > 0]
+		else:
+			
+		
 		
 
 	OUTPUT:
+		if there's an 'e' column (propensity score):
+			{'ate_pred': float, 'att_pred': float,
+                         'bias_att': bias_att, 'atc_pred': atc_pred,
+                         'err_fact': err_fact, 'lpr': lpr,
+                         'policy_value': policy_value, 'policy_risk': 1 - policy_value,
+                         'policy_curve': policy_curve, 'pehe_nn': pehe_appr}
+		else:
+			
+evaluate_cont_ate():
+	INPUT:
+		predictions: shape (726, 2, 5, 11) [:,:,i_rep,i_out]
+
+		data:   data -- {'x': arr['x'], 't': arr['t'], 'e': arr['e'](or None), 
+						'yf': arr['yf'], 'ycf': arr['ycf'](or None),
+						'mu0': arr['mu0'](or None), 'mu1': arr['mu1'](or None), 
+						'ate': np.mean(arr['ate'])(or None), 
+						'YMUL': arr['ymul'][0,0](or 1), 'YADD': arr['yadd'][0,0](or 0), 
+						'ATE': np.mean(arr['ate'])(or None),
+						'HAVE_TRUTH': False (True if there's 'ycf','mu0' and 'mu1'), 'SPARSE': False}
+						(output of 'load_data')
+
+		i_exp: i_rep
+
+		I_subset: I_valid_rep -- None
+
+		compute_policy_curve: compute_policy_curve -- True
+
+		nn_t: nn_t -- np.nan
+
+		nn_c: nn_c -- np.nan
+
+	(content)
+		eff_pred = predictions[:,1] - predictions[:,0]
+		eff = mu1-mu0
+		pehe = np.sqrt(np.mean(np.square(eff_pred-eff)))
+		
+
+	OUTPUT: (all values are float)
+		{'ate_pred': ate_pred, 'att_pred': att_pred,
+                 'atc_pred': atc_pred, 'bias_ate': bias_ate,
+                 'bias_att': bias_att, 'bias_atc': bias_atc,
+                 'rmse_fact': rmse_fact, 'rmse_cfact': rmse_cfact,
+                 'pehe': pehe, 'rmse_ite': rmse_ite, 'pehe_nn': pehe_appr, 'auc': auc,'roc_auc':roc_auc,
+                 'fact_auc':fact_auc,'fact_roc_auc':fact_roc_auc}
 ###################
 # simi_ite.loader #
 ###################

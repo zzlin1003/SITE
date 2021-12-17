@@ -1,0 +1,246 @@
+Training with hyperparameters: p_pddm=1e+03, r_mid_point_mini=3.2
+Training data: /Users/zhizhonglin/Desktop/causal_inference/deepLearning/WTEDVAE/ACIC/ACIC_1_10_setting_7_train.npz
+Test data:     /Users/zhizhonglin/Desktop/causal_inference/deepLearning/WTEDVAE/ACIC/ACIC_1_10_setting_7_test.npz
+Loaded data with shape [3601,82]
+Defining graph...
+
+Training on experiment 1/10...
+0	Obj: 166277.703,	F: 5.981,	Cf: 6.304,	PDDM: 1.7e+02,	mid_p: 0.12,	Val: 5.534,	ValObj: 213206.58
+100	Obj: 20447.000,	F: 5.559,	Cf: 6.008,	PDDM: 20,	mid_p: 0.00092,	Val: 5.186,	ValObj: 16081.27
+200	Obj: 38522.996,	F: 5.561,	Cf: 6.005,	PDDM: 38,	mid_p: 0.00013,	Val: 5.185,	ValObj: 10973.40
+300	Obj: 33351.867,	F: 5.551,	Cf: 6.007,	PDDM: 33,	mid_p: 0.00051,	Val: 5.180,	ValObj: 20258.46
+400	Obj: 29579.660,	F: 5.549,	Cf: 6.026,	PDDM: 30,	mid_p: 0.00019,	Val: 5.186,	ValObj: 17771.93
+500	Obj: 17703.301,	F: 5.557,	Cf: 6.078,	PDDM: 18,	mid_p: 0.00027,	Val: 5.207,	ValObj: 22939.48
+600	Obj: 20501.805,	F: 5.548,	Cf: 6.026,	PDDM: 20,	mid_p: 0.00028,	Val: 5.186,	ValObj: 18908.97
+700	Obj: 18759.883,	F: 5.558,	Cf: 6.030,	PDDM: 19,	mid_p: 0.00028,	Val: 5.199,	ValObj: 17054.92
+800	Obj: 21764.621,	F: 5.551,	Cf: 6.037,	PDDM: 22,	mid_p: 2.5e-05,	Val: 5.195,	ValObj: 17506.62
+900	Obj: 21864.682,	F: 5.548,	Cf: 6.026,	PDDM: 22,	mid_p: 1.4e-05,	Val: 5.186,	ValObj: 25714.09
+1000	Obj: 21451.357,	F: 5.550,	Cf: 6.010,	PDDM: 21,	mid_p: 1.4e-05,	Val: 5.181,	ValObj: 25256.93
+1100	Obj: 17923.488,	F: 5.549,	Cf: 6.024,	PDDM: 18,	mid_p: 1.4e-05,	Val: 5.184,	ValObj: 18425.15
+1200	Obj: 18536.629,	F: 5.554,	Cf: 6.000,	PDDM: 19,	mid_p: 1.4e-05,	Val: 5.177,	ValObj: 20029.75
+1300	Obj: 19803.412,	F: 5.549,	Cf: 6.021,	PDDM: 20,	mid_p: 1.4e-05,	Val: 5.186,	ValObj: 15326.49
+1400	Obj: 20586.230,	F: 5.549,	Cf: 6.040,	PDDM: 21,	mid_p: 1.4e-05,	Val: 5.192,	ValObj: 15848.52
+1500	Obj: 26708.646,	F: 5.549,	Cf: 6.025,	PDDM: 27,	mid_p: 1.4e-05,	Val: 5.185,	ValObj: 11770.58
+1600	Obj: 26337.523,	F: 5.549,	Cf: 6.016,	PDDM: 26,	mid_p: 1.4e-05,	Val: 5.182,	ValObj: 13905.06
+1700	Obj: 25020.662,	F: 5.553,	Cf: 6.023,	PDDM: 25,	mid_p: 1.4e-05,	Val: 5.191,	ValObj: 13447.74
+1800	Obj: 12569.736,	F: 5.548,	Cf: 6.021,	PDDM: 13,	mid_p: 1.4e-05,	Val: 5.184,	ValObj: 24122.90
+1900	Obj: 26118.584,	F: 5.549,	Cf: 6.022,	PDDM: 26,	mid_p: 1.4e-05,	Val: 5.184,	ValObj: 13441.66
+1999	Obj: 21637.955,	F: 5.550,	Cf: 6.041,	PDDM: 22,	mid_p: 1.4e-05,	Val: 5.191,	ValObj: 17641.50
+Saving result to results/ihdpresults_20211208_171945-198019/...
+
+Training on experiment 2/10...
+0	Obj: 166652.609,	F: 6.480,	Cf: 7.331,	PDDM: 1.7e+02,	mid_p: 0.035,	Val: 6.464,	ValObj: 211572.38
+100	Obj: 29511.619,	F: 4.728,	Cf: 4.389,	PDDM: 29,	mid_p: 0.0015,	Val: 4.621,	ValObj: 14115.69
+200	Obj: 24141.906,	F: 4.706,	Cf: 4.400,	PDDM: 24,	mid_p: 0.0031,	Val: 4.622,	ValObj: 10676.34
+300	Obj: 24888.076,	F: 4.713,	Cf: 4.441,	PDDM: 25,	mid_p: 0.0023,	Val: 4.653,	ValObj: 14316.21
+400	Obj: 16561.479,	F: 4.706,	Cf: 4.413,	PDDM: 17,	mid_p: 0.0021,	Val: 4.625,	ValObj: 13271.51
+500	Obj: 25690.465,	F: 4.703,	Cf: 4.406,	PDDM: 26,	mid_p: 0.0021,	Val: 4.627,	ValObj: 11027.91
+600	Obj: 18183.568,	F: 4.702,	Cf: 4.408,	PDDM: 18,	mid_p: 0.002,	Val: 4.629,	ValObj: 23260.58
+700	Obj: 25725.188,	F: 4.702,	Cf: 4.409,	PDDM: 26,	mid_p: 0.002,	Val: 4.631,	ValObj: 9541.74
+800	Obj: 21442.025,	F: 4.702,	Cf: 4.417,	PDDM: 21,	mid_p: 0.0018,	Val: 4.633,	ValObj: 14293.49
+900	Obj: 21665.992,	F: 4.719,	Cf: 4.457,	PDDM: 22,	mid_p: 0.0017,	Val: 4.644,	ValObj: 10391.45
+1000	Obj: 18787.281,	F: 4.698,	Cf: 4.402,	PDDM: 19,	mid_p: 0.0015,	Val: 4.620,	ValObj: 12752.76
+1100	Obj: 20569.592,	F: 4.698,	Cf: 4.406,	PDDM: 21,	mid_p: 0.0014,	Val: 4.627,	ValObj: 23737.82
+1200	Obj: 23620.299,	F: 4.724,	Cf: 4.458,	PDDM: 24,	mid_p: 0.0013,	Val: 4.627,	ValObj: 11173.57
+1300	Obj: 9568.291,	F: 4.693,	Cf: 4.425,	PDDM: 9.5,	mid_p: 0.0014,	Val: 4.644,	ValObj: 23262.89
+1400	Obj: 23273.410,	F: 4.697,	Cf: 4.451,	PDDM: 23,	mid_p: 0.0014,	Val: 4.652,	ValObj: 10655.67
+1500	Obj: 18523.996,	F: 4.678,	Cf: 4.399,	PDDM: 19,	mid_p: 0.0015,	Val: 4.610,	ValObj: 16640.61
+1600	Obj: 25531.197,	F: 4.635,	Cf: 4.395,	PDDM: 26,	mid_p: 0.0015,	Val: 4.590,	ValObj: 9586.54
+1700	Obj: 19000.721,	F: 4.592,	Cf: 4.361,	PDDM: 19,	mid_p: 0.0016,	Val: 4.544,	ValObj: 15859.14
+1800	Obj: 29268.941,	F: 4.614,	Cf: 4.357,	PDDM: 29,	mid_p: 0.0017,	Val: 4.548,	ValObj: 8186.97
+1900	Obj: 20378.141,	F: 4.596,	Cf: 4.341,	PDDM: 20,	mid_p: 0.0017,	Val: 4.529,	ValObj: 13995.12
+1999	Obj: 22873.963,	F: 4.599,	Cf: 4.452,	PDDM: 23,	mid_p: 0.0017,	Val: 4.625,	ValObj: 11448.88
+Saving result to results/ihdpresults_20211208_171945-198019/...
+
+Training on experiment 3/10...
+0	Obj: 152237.516,	F: 23.269,	Cf: 25.534,	PDDM: 1.5e+02,	mid_p: 0.015,	Val: 23.321,	ValObj: 221098.84
+100	Obj: 17320.736,	F: 3.676,	Cf: 4.057,	PDDM: 17,	mid_p: 0.0077,	Val: 3.958,	ValObj: 21523.58
+200	Obj: 19255.051,	F: 3.645,	Cf: 3.974,	PDDM: 19,	mid_p: 0.0089,	Val: 3.919,	ValObj: 21344.64
+300	Obj: 22285.469,	F: 3.643,	Cf: 3.976,	PDDM: 22,	mid_p: 0.00079,	Val: 3.920,	ValObj: 26288.93
+400	Obj: 16262.718,	F: 3.660,	Cf: 3.927,	PDDM: 16,	mid_p: 0.0008,	Val: 3.930,	ValObj: 17216.93
+500	Obj: 22326.607,	F: 3.763,	Cf: 4.419,	PDDM: 22,	mid_p: 0.0008,	Val: 4.027,	ValObj: 15745.43
+600	Obj: 11863.111,	F: 3.661,	Cf: 3.936,	PDDM: 12,	mid_p: 0.00038,	Val: 3.936,	ValObj: 34241.02
+700	Obj: 30919.680,	F: 3.699,	Cf: 3.981,	PDDM: 31,	mid_p: 0.00038,	Val: 3.988,	ValObj: 8518.78
+800	Obj: 25819.443,	F: 3.680,	Cf: 3.936,	PDDM: 26,	mid_p: 0.00038,	Val: 3.941,	ValObj: 16357.92
+900	Obj: 18968.469,	F: 3.682,	Cf: 3.964,	PDDM: 19,	mid_p: 0.00037,	Val: 3.966,	ValObj: 17695.95
+1000	Obj: 16204.839,	F: 3.709,	Cf: 4.081,	PDDM: 16,	mid_p: 0.00037,	Val: 3.965,	ValObj: 20613.61
+1100	Obj: 21127.578,	F: 3.662,	Cf: 4.009,	PDDM: 21,	mid_p: 0.00037,	Val: 3.952,	ValObj: 14140.48
+1200	Obj: 15849.446,	F: 3.662,	Cf: 3.935,	PDDM: 16,	mid_p: 0.00037,	Val: 3.936,	ValObj: 20314.60
+1300	Obj: 25511.447,	F: 3.685,	Cf: 3.933,	PDDM: 25,	mid_p: 0.00037,	Val: 3.951,	ValObj: 9919.50
+1400	Obj: 23726.754,	F: 3.645,	Cf: 3.946,	PDDM: 24,	mid_p: 0.00037,	Val: 3.919,	ValObj: 12978.33
+1500	Obj: 20368.055,	F: 3.650,	Cf: 3.975,	PDDM: 20,	mid_p: 0.00037,	Val: 3.936,	ValObj: 18680.31
+1600	Obj: 20538.369,	F: 3.687,	Cf: 4.185,	PDDM: 21,	mid_p: 0.00037,	Val: 3.958,	ValObj: 12520.10
+1700	Obj: 19841.678,	F: 3.645,	Cf: 4.016,	PDDM: 20,	mid_p: 0.00037,	Val: 3.926,	ValObj: 12745.35
+1800	Obj: 21254.133,	F: 3.664,	Cf: 4.106,	PDDM: 21,	mid_p: 0.0003,	Val: 3.942,	ValObj: 14310.21
+1900	Obj: 25852.027,	F: 3.816,	Cf: 3.944,	PDDM: 26,	mid_p: 0.00023,	Val: 4.053,	ValObj: 12500.56
+1999	Obj: 17591.922,	F: 3.648,	Cf: 3.981,	PDDM: 18,	mid_p: 0.0002,	Val: 3.930,	ValObj: 22685.18
+Saving result to results/ihdpresults_20211208_171945-198019/...
+
+Training on experiment 4/10...
+0	Obj: 236681.484,	F: 6.070,	Cf: 7.277,	PDDM: 2.4e+02,	mid_p: 0.00085,	Val: 6.115,	ValObj: 150856.92
+100	Obj: 26310.773,	F: 5.231,	Cf: 5.593,	PDDM: 26,	mid_p: 0.012,	Val: 5.174,	ValObj: 12530.24
+200	Obj: 16121.126,	F: 4.998,	Cf: 5.317,	PDDM: 16,	mid_p: 0.01,	Val: 4.913,	ValObj: 14833.18
+300	Obj: 28298.025,	F: 5.453,	Cf: 5.752,	PDDM: 28,	mid_p: 0.00019,	Val: 5.438,	ValObj: 7047.88
+400	Obj: 14271.287,	F: 5.425,	Cf: 5.656,	PDDM: 14,	mid_p: 0.00012,	Val: 5.400,	ValObj: 15169.80
+500	Obj: 16977.275,	F: 5.422,	Cf: 5.624,	PDDM: 17,	mid_p: 0.00011,	Val: 5.391,	ValObj: 12134.61
+600	Obj: 22864.334,	F: 5.424,	Cf: 5.609,	PDDM: 23,	mid_p: 0.00011,	Val: 5.387,	ValObj: 12852.97
+700	Obj: 15626.040,	F: 5.432,	Cf: 5.671,	PDDM: 16,	mid_p: 0.0001,	Val: 5.409,	ValObj: 18158.52
+800	Obj: 20075.348,	F: 5.422,	Cf: 5.626,	PDDM: 20,	mid_p: 0.0001,	Val: 5.391,	ValObj: 21263.10
+900	Obj: 22452.242,	F: 5.424,	Cf: 5.619,	PDDM: 22,	mid_p: 0.0001,	Val: 5.389,	ValObj: 11425.07
+1000	Obj: 10945.264,	F: 5.423,	Cf: 5.628,	PDDM: 11,	mid_p: 0.0001,	Val: 5.393,	ValObj: 20965.85
+1100	Obj: 11402.154,	F: 5.422,	Cf: 5.617,	PDDM: 11,	mid_p: 0.0001,	Val: 5.389,	ValObj: 19739.40
+1200	Obj: 15928.664,	F: 5.427,	Cf: 5.630,	PDDM: 16,	mid_p: 0.0001,	Val: 5.392,	ValObj: 16277.73
+1300	Obj: 16594.180,	F: 5.422,	Cf: 5.631,	PDDM: 17,	mid_p: 0.0001,	Val: 5.392,	ValObj: 16001.71
+1400	Obj: 12279.717,	F: 5.425,	Cf: 5.613,	PDDM: 12,	mid_p: 0.0001,	Val: 5.388,	ValObj: 17255.00
+1500	Obj: 11979.583,	F: 5.421,	Cf: 5.614,	PDDM: 12,	mid_p: 0.0001,	Val: 5.388,	ValObj: 20225.80
+1600	Obj: 29922.441,	F: 5.421,	Cf: 5.611,	PDDM: 30,	mid_p: 9.9e-05,	Val: 5.388,	ValObj: 11227.89
+1700	Obj: 15422.269,	F: 5.421,	Cf: 5.620,	PDDM: 15,	mid_p: 9.9e-05,	Val: 5.389,	ValObj: 18374.61
+1800	Obj: 21298.143,	F: 5.421,	Cf: 5.611,	PDDM: 21,	mid_p: 9.9e-05,	Val: 5.387,	ValObj: 10093.37
+1900	Obj: 24926.850,	F: 5.423,	Cf: 5.641,	PDDM: 25,	mid_p: 9.9e-05,	Val: 5.397,	ValObj: 9429.29
+1999	Obj: 25952.023,	F: 5.422,	Cf: 5.614,	PDDM: 26,	mid_p: 9.9e-05,	Val: 5.387,	ValObj: 12611.49
+Saving result to results/ihdpresults_20211208_171945-198019/...
+
+Training on experiment 5/10...
+0	Obj: 224910.469,	F: 20.139,	Cf: 18.528,	PDDM: 2.2e+02,	mid_p: 0.022,	Val: 19.935,	ValObj: 213921.84
+100	Obj: 8294.633,	F: 4.824,	Cf: 5.313,	PDDM: 8.3,	mid_p: 0.0012,	Val: 4.870,	ValObj: 7450.67
+200	Obj: 11092.275,	F: 4.823,	Cf: 5.044,	PDDM: 11,	mid_p: 0.0021,	Val: 4.869,	ValObj: 9078.97
+300	Obj: 9378.869,	F: 4.814,	Cf: 5.464,	PDDM: 9.4,	mid_p: 0.0023,	Val: 4.892,	ValObj: 9068.53
+400	Obj: 18613.461,	F: 4.785,	Cf: 5.396,	PDDM: 19,	mid_p: 0.0028,	Val: 4.867,	ValObj: 17469.99
+500	Obj: 12020.715,	F: 4.868,	Cf: 5.311,	PDDM: 12,	mid_p: 6.4e-06,	Val: 4.903,	ValObj: 10562.84
+600	Obj: 24703.707,	F: 4.883,	Cf: 5.227,	PDDM: 25,	mid_p: 5.7e-06,	Val: 4.907,	ValObj: 22823.61
+700	Obj: 10573.933,	F: 4.880,	Cf: 5.537,	PDDM: 11,	mid_p: 5.7e-06,	Val: 4.929,	ValObj: 10205.46
+800	Obj: 8883.241,	F: 4.865,	Cf: 5.271,	PDDM: 8.9,	mid_p: 6.3e-06,	Val: 4.920,	ValObj: 9647.88
+900	Obj: 13705.288,	F: 4.978,	Cf: 5.375,	PDDM: 14,	mid_p: 6.5e-06,	Val: 4.964,	ValObj: 12879.04
+1000	Obj: 14773.565,	F: 4.867,	Cf: 5.174,	PDDM: 15,	mid_p: 6.4e-06,	Val: 4.916,	ValObj: 14469.04
+1100	Obj: 22462.904,	F: 4.893,	Cf: 5.269,	PDDM: 22,	mid_p: 6.4e-06,	Val: 4.910,	ValObj: 23008.91
+1200	Obj: 11770.630,	F: 4.893,	Cf: 5.696,	PDDM: 12,	mid_p: 6.4e-06,	Val: 4.932,	ValObj: 11092.58
+1300	Obj: 28467.809,	F: 4.874,	Cf: 5.127,	PDDM: 28,	mid_p: 6.3e-06,	Val: 4.917,	ValObj: 27894.52
+1400	Obj: 28917.467,	F: 4.904,	Cf: 5.312,	PDDM: 29,	mid_p: 6.3e-06,	Val: 4.914,	ValObj: 28277.89
+1500	Obj: 17590.121,	F: 4.891,	Cf: 5.362,	PDDM: 18,	mid_p: 6.2e-06,	Val: 4.906,	ValObj: 17897.75
+1600	Obj: 23354.189,	F: 4.878,	Cf: 5.182,	PDDM: 23,	mid_p: 6.2e-06,	Val: 4.907,	ValObj: 22069.34
+1700	Obj: 22406.504,	F: 4.869,	Cf: 5.415,	PDDM: 22,	mid_p: 6.2e-06,	Val: 4.901,	ValObj: 21282.14
+1800	Obj: 19830.658,	F: 4.870,	Cf: 5.316,	PDDM: 20,	mid_p: 6.2e-06,	Val: 4.899,	ValObj: 19918.75
+1900	Obj: 9011.646,	F: 4.862,	Cf: 5.285,	PDDM: 9,	mid_p: 6.1e-06,	Val: 4.919,	ValObj: 9575.22
+1999	Obj: 20802.494,	F: 4.870,	Cf: 5.319,	PDDM: 21,	mid_p: 6.1e-06,	Val: 4.899,	ValObj: 20404.82
+Saving result to results/ihdpresults_20211208_171945-198019/...
+
+Training on experiment 6/10...
+0	Obj: 222193.188,	F: 6.487,	Cf: 6.693,	PDDM: 2.2e+02,	mid_p: 0.019,	Val: 6.639,	ValObj: 202441.28
+100	Obj: 15248.154,	F: 5.876,	Cf: 5.902,	PDDM: 15,	mid_p: 0.0035,	Val: 6.000,	ValObj: 9619.14
+200	Obj: 20137.068,	F: 5.919,	Cf: 5.947,	PDDM: 20,	mid_p: 0.00026,	Val: 6.047,	ValObj: 16602.25
+300	Obj: 18179.309,	F: 5.922,	Cf: 5.881,	PDDM: 18,	mid_p: 0.00026,	Val: 6.052,	ValObj: 14366.72
+400	Obj: 14603.587,	F: 5.921,	Cf: 5.979,	PDDM: 15,	mid_p: 0.00026,	Val: 6.052,	ValObj: 10825.04
+500	Obj: 19851.824,	F: 5.921,	Cf: 5.892,	PDDM: 20,	mid_p: 0.00026,	Val: 6.048,	ValObj: 16287.72
+600	Obj: 13662.354,	F: 5.918,	Cf: 5.901,	PDDM: 14,	mid_p: 0.00026,	Val: 6.048,	ValObj: 10858.86
+700	Obj: 28354.111,	F: 5.919,	Cf: 5.891,	PDDM: 28,	mid_p: 0.00026,	Val: 6.059,	ValObj: 26011.06
+800	Obj: 26593.568,	F: 5.917,	Cf: 5.910,	PDDM: 27,	mid_p: 0.00026,	Val: 6.055,	ValObj: 21050.85
+900	Obj: 7354.551,	F: 5.917,	Cf: 5.929,	PDDM: 7.3,	mid_p: 0.00026,	Val: 6.047,	ValObj: 6808.24
+1000	Obj: 14320.434,	F: 5.919,	Cf: 5.885,	PDDM: 14,	mid_p: 0.00026,	Val: 6.053,	ValObj: 11468.32
+1100	Obj: 13946.772,	F: 5.918,	Cf: 5.950,	PDDM: 14,	mid_p: 0.00026,	Val: 6.047,	ValObj: 11391.08
+1200	Obj: 21550.020,	F: 5.916,	Cf: 5.906,	PDDM: 22,	mid_p: 0.00026,	Val: 6.046,	ValObj: 19678.23
+1300	Obj: 19677.244,	F: 5.917,	Cf: 5.903,	PDDM: 20,	mid_p: 0.00026,	Val: 6.043,	ValObj: 16042.83
+1400	Obj: 19926.221,	F: 5.924,	Cf: 6.016,	PDDM: 20,	mid_p: 0.00026,	Val: 6.047,	ValObj: 15886.02
+1500	Obj: 13953.206,	F: 5.906,	Cf: 5.901,	PDDM: 14,	mid_p: 0.00026,	Val: 6.040,	ValObj: 11028.29
+1600	Obj: 20768.771,	F: 5.903,	Cf: 5.976,	PDDM: 21,	mid_p: 0.00026,	Val: 6.043,	ValObj: 17355.92
+1700	Obj: 14936.432,	F: 5.893,	Cf: 5.976,	PDDM: 15,	mid_p: 0.00025,	Val: 6.060,	ValObj: 12472.88
+1800	Obj: 16822.473,	F: 5.871,	Cf: 6.038,	PDDM: 17,	mid_p: 0.00025,	Val: 6.063,	ValObj: 13551.32
+1900	Obj: 11237.564,	F: 5.848,	Cf: 5.874,	PDDM: 11,	mid_p: 0.00025,	Val: 5.969,	ValObj: 9461.29
+1999	Obj: 10575.201,	F: 5.753,	Cf: 5.868,	PDDM: 11,	mid_p: 0.00025,	Val: 5.930,	ValObj: 8732.78
+Saving result to results/ihdpresults_20211208_171945-198019/...
+
+Training on experiment 7/10...
+0	Obj: 167306.016,	F: 22.123,	Cf: 23.987,	PDDM: 1.7e+02,	mid_p: 0.014,	Val: 22.133,	ValObj: 218610.78
+100	Obj: 27518.477,	F: 5.538,	Cf: 5.504,	PDDM: 27,	mid_p: 0.00015,	Val: 5.686,	ValObj: 13616.11
+200	Obj: 23947.678,	F: 5.523,	Cf: 5.499,	PDDM: 24,	mid_p: 7e-05,	Val: 5.668,	ValObj: 15850.75
+300	Obj: 21791.545,	F: 5.553,	Cf: 5.510,	PDDM: 22,	mid_p: 7.7e-05,	Val: 5.695,	ValObj: 22477.93
+400	Obj: 23705.627,	F: 5.515,	Cf: 5.504,	PDDM: 24,	mid_p: 7.7e-05,	Val: 5.664,	ValObj: 20674.41
+500	Obj: 18771.111,	F: 5.504,	Cf: 5.544,	PDDM: 19,	mid_p: 7.7e-05,	Val: 5.652,	ValObj: 26315.20
+600	Obj: 25138.211,	F: 5.509,	Cf: 5.554,	PDDM: 25,	mid_p: 7.7e-05,	Val: 5.656,	ValObj: 16477.03
+700	Obj: 17106.217,	F: 5.520,	Cf: 5.616,	PDDM: 17,	mid_p: 7.5e-05,	Val: 5.669,	ValObj: 19930.62
+800	Obj: 27538.164,	F: 5.513,	Cf: 5.494,	PDDM: 28,	mid_p: 7.5e-05,	Val: 5.662,	ValObj: 12554.20
+900	Obj: 15601.572,	F: 5.517,	Cf: 5.533,	PDDM: 16,	mid_p: 7.7e-05,	Val: 5.663,	ValObj: 30597.50
+1000	Obj: 20467.059,	F: 5.544,	Cf: 5.502,	PDDM: 20,	mid_p: 7.8e-05,	Val: 5.688,	ValObj: 24970.06
+1100	Obj: 16879.576,	F: 5.502,	Cf: 5.524,	PDDM: 17,	mid_p: 7.9e-05,	Val: 5.650,	ValObj: 22433.19
+1200	Obj: 28900.277,	F: 5.535,	Cf: 5.694,	PDDM: 29,	mid_p: 0.00017,	Val: 5.684,	ValObj: 9369.25
+1300	Obj: 20459.955,	F: 5.507,	Cf: 5.488,	PDDM: 20,	mid_p: 0.00017,	Val: 5.655,	ValObj: 22090.29
+1400	Obj: 25051.477,	F: 5.549,	Cf: 5.591,	PDDM: 25,	mid_p: 0.00017,	Val: 5.694,	ValObj: 13070.31
+1500	Obj: 18070.113,	F: 5.505,	Cf: 5.496,	PDDM: 18,	mid_p: 0.00017,	Val: 5.653,	ValObj: 18760.48
+1600	Obj: 22155.553,	F: 5.520,	Cf: 5.489,	PDDM: 22,	mid_p: 0.00017,	Val: 5.666,	ValObj: 16830.74
+1700	Obj: 17304.035,	F: 5.503,	Cf: 5.485,	PDDM: 17,	mid_p: 0.00018,	Val: 5.652,	ValObj: 28118.87
+1800	Obj: 15489.394,	F: 5.542,	Cf: 5.609,	PDDM: 15,	mid_p: 0.00018,	Val: 5.695,	ValObj: 22039.61
+1900	Obj: 15447.613,	F: 5.498,	Cf: 5.491,	PDDM: 15,	mid_p: 0.00018,	Val: 5.647,	ValObj: 28718.84
+1999	Obj: 19522.570,	F: 5.502,	Cf: 5.500,	PDDM: 19,	mid_p: 0.00018,	Val: 5.654,	ValObj: 16584.64
+Saving result to results/ihdpresults_20211208_171945-198019/...
+
+Training on experiment 8/10...
+0	Obj: 227265.578,	F: 5.733,	Cf: 5.581,	PDDM: 2.3e+02,	mid_p: 0.0045,	Val: 5.227,	ValObj: 161569.06
+100	Obj: 16530.148,	F: 5.311,	Cf: 5.224,	PDDM: 17,	mid_p: 0.00028,	Val: 4.812,	ValObj: 21085.61
+200	Obj: 24198.635,	F: 5.301,	Cf: 5.378,	PDDM: 24,	mid_p: 0.00026,	Val: 4.827,	ValObj: 17564.09
+300	Obj: 17336.365,	F: 5.302,	Cf: 5.318,	PDDM: 17,	mid_p: 0.00029,	Val: 4.811,	ValObj: 21977.05
+400	Obj: 23078.443,	F: 5.301,	Cf: 5.276,	PDDM: 23,	mid_p: 0.00024,	Val: 4.811,	ValObj: 13486.01
+500	Obj: 24526.391,	F: 5.300,	Cf: 5.394,	PDDM: 25,	mid_p: 0.00023,	Val: 4.822,	ValObj: 24040.18
+600	Obj: 20904.742,	F: 5.302,	Cf: 5.303,	PDDM: 21,	mid_p: 0.0002,	Val: 4.823,	ValObj: 21208.31
+700	Obj: 19217.514,	F: 5.300,	Cf: 5.342,	PDDM: 19,	mid_p: 9.1e-05,	Val: 4.823,	ValObj: 19862.83
+800	Obj: 26393.697,	F: 5.300,	Cf: 5.319,	PDDM: 26,	mid_p: 9.1e-05,	Val: 4.811,	ValObj: 12953.23
+900	Obj: 26498.727,	F: 5.300,	Cf: 5.306,	PDDM: 26,	mid_p: 9.1e-05,	Val: 4.810,	ValObj: 11692.47
+1000	Obj: 23344.119,	F: 5.298,	Cf: 5.322,	PDDM: 23,	mid_p: 9e-05,	Val: 4.815,	ValObj: 17667.61
+1100	Obj: 17600.795,	F: 5.302,	Cf: 5.373,	PDDM: 18,	mid_p: 9e-05,	Val: 4.829,	ValObj: 18711.18
+1200	Obj: 23231.482,	F: 5.307,	Cf: 5.351,	PDDM: 23,	mid_p: 3.8e-05,	Val: 4.814,	ValObj: 14307.63
+1300	Obj: 19279.734,	F: 5.302,	Cf: 5.336,	PDDM: 19,	mid_p: 3.8e-05,	Val: 4.811,	ValObj: 18849.97
+1400	Obj: 21704.037,	F: 5.300,	Cf: 5.341,	PDDM: 22,	mid_p: 3.7e-05,	Val: 4.823,	ValObj: 20774.62
+1500	Obj: 25830.455,	F: 5.303,	Cf: 5.309,	PDDM: 26,	mid_p: 3.7e-05,	Val: 4.808,	ValObj: 19279.29
+1600	Obj: 24081.229,	F: 5.295,	Cf: 5.314,	PDDM: 24,	mid_p: 3.7e-05,	Val: 4.808,	ValObj: 15093.26
+1700	Obj: 21573.607,	F: 5.294,	Cf: 5.295,	PDDM: 22,	mid_p: 3.7e-05,	Val: 4.807,	ValObj: 17180.99
+1800	Obj: 32419.252,	F: 5.294,	Cf: 5.309,	PDDM: 32,	mid_p: 3.7e-05,	Val: 4.803,	ValObj: 9959.23
+1900	Obj: 23101.803,	F: 5.291,	Cf: 5.349,	PDDM: 23,	mid_p: 3.7e-05,	Val: 4.815,	ValObj: 16075.22
+1999	Obj: 14957.250,	F: 5.306,	Cf: 5.276,	PDDM: 15,	mid_p: 3.7e-05,	Val: 4.805,	ValObj: 21026.18
+Saving result to results/ihdpresults_20211208_171945-198019/...
+
+Training on experiment 9/10...
+0	Obj: 229261.516,	F: 37.464,	Cf: 39.893,	PDDM: 2.3e+02,	mid_p: 0.034,	Val: 37.319,	ValObj: 155125.58
+100	Obj: 21137.443,	F: 4.398,	Cf: 8.311,	PDDM: 21,	mid_p: 0.0017,	Val: 3.692,	ValObj: 8981.20
+200	Obj: 17101.195,	F: 4.344,	Cf: 8.282,	PDDM: 17,	mid_p: 0.00083,	Val: 3.655,	ValObj: 15743.02
+300	Obj: 23072.227,	F: 4.349,	Cf: 8.306,	PDDM: 23,	mid_p: 0.00083,	Val: 3.665,	ValObj: 14208.68
+400	Obj: 22130.725,	F: 4.337,	Cf: 8.300,	PDDM: 22,	mid_p: 0.00083,	Val: 3.627,	ValObj: 10881.96
+500	Obj: 25093.705,	F: 6.031,	Cf: 9.671,	PDDM: 25,	mid_p: 0.0055,	Val: 5.561,	ValObj: 17842.89
+600	Obj: 14197.755,	F: 4.221,	Cf: 8.157,	PDDM: 14,	mid_p: 0.0028,	Val: 3.524,	ValObj: 17524.73
+700	Obj: 18062.703,	F: 4.220,	Cf: 8.173,	PDDM: 18,	mid_p: 0.0029,	Val: 3.523,	ValObj: 15004.08
+800	Obj: 24478.203,	F: 4.222,	Cf: 8.137,	PDDM: 24,	mid_p: 0.003,	Val: 3.531,	ValObj: 15189.28
+900	Obj: 9773.781,	F: 4.227,	Cf: 8.126,	PDDM: 9.8,	mid_p: 0.0031,	Val: 3.545,	ValObj: 22604.31
+1000	Obj: 19388.078,	F: 4.245,	Cf: 8.192,	PDDM: 19,	mid_p: 0.01,	Val: 3.531,	ValObj: 13393.75
+1100	Obj: 17346.773,	F: 4.278,	Cf: 8.235,	PDDM: 17,	mid_p: 0.00017,	Val: 3.571,	ValObj: 19636.14
+1200	Obj: 17520.414,	F: 4.296,	Cf: 8.167,	PDDM: 17,	mid_p: 0.00017,	Val: 3.613,	ValObj: 14353.35
+1300	Obj: 16478.553,	F: 4.278,	Cf: 8.197,	PDDM: 16,	mid_p: 0.00017,	Val: 3.582,	ValObj: 15089.87
+1400	Obj: 10326.886,	F: 4.287,	Cf: 8.177,	PDDM: 10,	mid_p: 0.00017,	Val: 3.597,	ValObj: 19102.53
+1500	Obj: 12377.022,	F: 4.276,	Cf: 8.233,	PDDM: 12,	mid_p: 0.00017,	Val: 3.576,	ValObj: 17609.21
+1600	Obj: 15291.829,	F: 4.362,	Cf: 8.465,	PDDM: 15,	mid_p: 0.00017,	Val: 3.641,	ValObj: 16380.54
+1700	Obj: 18290.217,	F: 4.278,	Cf: 8.260,	PDDM: 18,	mid_p: 0.00017,	Val: 3.569,	ValObj: 9847.79
+1800	Obj: 18337.742,	F: 4.294,	Cf: 8.248,	PDDM: 18,	mid_p: 0.00017,	Val: 3.577,	ValObj: 13235.98
+1900	Obj: 31740.674,	F: 4.308,	Cf: 8.181,	PDDM: 32,	mid_p: 0.00017,	Val: 3.639,	ValObj: 17731.91
+1999	Obj: 14295.193,	F: 4.305,	Cf: 8.363,	PDDM: 14,	mid_p: 0.00017,	Val: 3.600,	ValObj: 17705.05
+Saving result to results/ihdpresults_20211208_171945-198019/...
+
+Training on experiment 10/10...
+0	Obj: 236489.141,	F: 5.975,	Cf: 9.123,	PDDM: 2.4e+02,	mid_p: 0.027,	Val: 5.563,	ValObj: 202467.09
+100	Obj: 12680.054,	F: 4.971,	Cf: 8.727,	PDDM: 13,	mid_p: 0.0013,	Val: 4.716,	ValObj: 9732.51
+200	Obj: 21759.740,	F: 4.970,	Cf: 8.684,	PDDM: 22,	mid_p: 0.0013,	Val: 4.693,	ValObj: 14340.35
+300	Obj: 25141.203,	F: 4.966,	Cf: 8.716,	PDDM: 25,	mid_p: 0.00098,	Val: 4.706,	ValObj: 17139.55
+400	Obj: 21697.561,	F: 4.968,	Cf: 8.725,	PDDM: 22,	mid_p: 6.5e-05,	Val: 4.706,	ValObj: 12978.62
+500	Obj: 19879.691,	F: 4.968,	Cf: 8.714,	PDDM: 20,	mid_p: 4.2e-05,	Val: 4.706,	ValObj: 12865.47
+600	Obj: 23331.438,	F: 4.969,	Cf: 8.720,	PDDM: 23,	mid_p: 4.2e-05,	Val: 4.711,	ValObj: 15522.33
+700	Obj: 17071.006,	F: 4.976,	Cf: 8.773,	PDDM: 17,	mid_p: 3.5e-05,	Val: 4.723,	ValObj: 10819.27
+800	Obj: 27645.654,	F: 4.969,	Cf: 8.702,	PDDM: 28,	mid_p: 2.2e-05,	Val: 4.697,	ValObj: 17855.54
+900	Obj: 17640.297,	F: 4.968,	Cf: 8.707,	PDDM: 18,	mid_p: 2.2e-05,	Val: 4.700,	ValObj: 10511.35
+1000	Obj: 15157.966,	F: 4.972,	Cf: 8.750,	PDDM: 15,	mid_p: 2.2e-05,	Val: 4.723,	ValObj: 9409.54
+1100	Obj: 13649.591,	F: 4.975,	Cf: 8.706,	PDDM: 14,	mid_p: 2.3e-05,	Val: 4.697,	ValObj: 7394.59
+1200	Obj: 18745.250,	F: 4.977,	Cf: 8.660,	PDDM: 19,	mid_p: 2.3e-05,	Val: 4.693,	ValObj: 11337.31
+1300	Obj: 23714.924,	F: 4.968,	Cf: 8.700,	PDDM: 24,	mid_p: 2.3e-05,	Val: 4.699,	ValObj: 15015.27
+1400	Obj: 19441.014,	F: 4.971,	Cf: 8.681,	PDDM: 19,	mid_p: 2.3e-05,	Val: 4.697,	ValObj: 12143.13
+1500	Obj: 9803.737,	F: 4.970,	Cf: 8.741,	PDDM: 9.8,	mid_p: 2.3e-05,	Val: 4.709,	ValObj: 4725.30
+1600	Obj: 27492.924,	F: 4.970,	Cf: 8.743,	PDDM: 27,	mid_p: 2.3e-05,	Val: 4.715,	ValObj: 19923.42
+1700	Obj: 20618.156,	F: 4.969,	Cf: 8.711,	PDDM: 21,	mid_p: 2.3e-05,	Val: 4.707,	ValObj: 12683.51
+1800	Obj: 16741.701,	F: 4.972,	Cf: 8.693,	PDDM: 17,	mid_p: 2.3e-05,	Val: 4.706,	ValObj: 9140.82
+1900	Obj: 12666.852,	F: 4.969,	Cf: 8.715,	PDDM: 13,	mid_p: 2.3e-05,	Val: 4.701,	ValObj: 7367.50
+1999	Obj: 9774.812,	F: 4.972,	Cf: 8.689,	PDDM: 9.8,	mid_p: 2.3e-05,	Val: 4.694,	ValObj: 4824.89
+Saving result to results/ihdpresults_20211208_171945-198019/...
+
